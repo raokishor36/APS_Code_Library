@@ -4,14 +4,18 @@
 
 using namespace std;
 
+void StringSort(string s, int n, int m)
+{
+	sort(s.begin()+n,s.begin()+m+1,greater<char>());
+	cout<<s<<'\n';	//Output
+}
+
 int main()
 {
-	int t;
 	string s;				//Input String
 	int n,m;				//Starting and ending index to be sorted
 	cin>>s;
 	cin>>n>>m;
-	sort(s.begin()+n,s.begin()+m+1,greater<char>());
-	cout<<s<<'\n';	//Output
+	StringSort(s,n,m);
 	return 0;
 }
